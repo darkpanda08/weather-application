@@ -1,6 +1,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-var morgan = require('morgan')
+var morgan = require('morgan');
+require('dotenv').config();
 
 const app = express();
 
@@ -9,7 +10,7 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 // Morgan
-app.use(morgan('combined'))
+//app.use(morgan('combined'))
 
 // Bodyparser
 app.use(express.json());
