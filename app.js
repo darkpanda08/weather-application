@@ -19,6 +19,7 @@ app.use('/public', express.static('public'));
 
 // Routes
 app.use('/', require('./routes/index'));
+app.use('/search', require('./routes/search'));
 
 // 404
 app.use((req, res, next) => {
