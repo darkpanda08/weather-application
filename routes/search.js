@@ -22,7 +22,6 @@ router.post('/', (req, res) => {
             } else {
                 req.flash('error_msg', "Looks like some error. Sorry")
             }
-            console.log(error.response.statusText);
             res.redirect('/');
         })
 });
