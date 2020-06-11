@@ -12,7 +12,8 @@ router.get('/', (req, res) => {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${key}`)
         .then((response) => {
             res.render('dashboard', {
-                data : response.data
+                data : response.data,
+                title: "Home - Weather App"
             });
         })
         .catch(function (error) {
