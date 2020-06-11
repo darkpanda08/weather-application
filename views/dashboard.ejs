@@ -1,5 +1,5 @@
 <%- include ("./partials/navbar") %>
-
+<%- include ("./partials/messages") %>
 <section class="text-gray-700 body-font">
     <div class="container px-5 md:py-24 pt-10 pb-4 mx-auto flex flex-wrap items-center">
       <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
@@ -12,6 +12,10 @@
         <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Get Current Weather</h2>
         <form action="/search" method="post" class="w-auto" id="search-bar">
             <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4 w-full" placeholder="City" type="text" id="search-text" name="city">
+            <select class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4 w-full" name="units">
+              <option value="metric">Metric</option>
+              <option value="imperial">Imperial</option>
+            </select>
             <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Search</button>
         </form>
         

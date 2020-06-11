@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 // Bodyparser
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 app.use('/public', express.static('public'));
 
 // Routes

@@ -7,15 +7,21 @@ var units = 'metric';
 
 // Main Page
 router.post('/', (req, res) => {
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${req.body.city}&units=${units}&appid=${key}`)
+    let err = [];
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${req.body.city}&units=${req.body.units}&appid=${key}`)
         .then((response) => {
             res.render('weather', {
                 data : response.data,
+                units: req.body.units,
                 title: req.body.city + " - Weather App"
             });            
         })
-        .catch(function (error) {
-            console.log(error);
+        .catch((error) => {
+            console.log(error.response.statusText);
+            err.push({ msg: error.response.statusText });
+            res.render('dashboard', {
+                title: "Home - Weather App"
+            });
         })
 });
 
