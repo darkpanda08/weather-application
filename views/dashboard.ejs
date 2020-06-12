@@ -11,7 +11,8 @@
       <div class="lg:w-2/6 md:w-1/2 bg-gray-200 rounded-lg p-8 pt-6 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
         <h2 class="text-gray-900 text-2xl font-semibold title-font mb-5">Get Current Weather</h2>
         <form action="/search" method="post" class="w-auto" id="search-bar">
-            <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4 w-full" placeholder="City" type="text" id="search-text" name="city">
+            <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-2 w-full" placeholder="City" type="text" id="search-text" name="city">
+            <p class="text-xs text-gray-500 mb-3">For cities with same name, you can enter Two letter Country code with city name sepearted by a comma.</p>
             <select class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4 w-full" name="units">
               <option value="metric">Metric</option>
               <option value="imperial">Imperial</option>
