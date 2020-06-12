@@ -8,9 +8,17 @@ var key = process.env.API_key;
 router.post('/', (req, res) => {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${req.body.city}&units=${req.body.units}&appid=${key}`)
         .then((response) => {
+            if (req.body.units === 'metric') {
+                temp_unit = '°C'
+                wind_speed_unit = 'meter/sec'
+            } else if(req.body.units === 'imperial') {
+                temp_unit = '°F'
+                wind_speed_unit = 'miles/hr'
+            }
             res.render('weather', {
                 data : response.data,
-                units: req.body.units,
+                wind_speed_unit: wind_speed_unit,
+                temp_unit: temp_unit,
                 title: req.body.city + " - Weather App"
             });            
         })
