@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node app",
     "prod": "cross-env NODE_ENV=production node app",
-    "dev": "cross-env NODE_ENV=development nodemon app",
-    "build:css": "tailwind build src/style.css -o public/css/style.css"
+    "dev": "cross-env NODE_ENV=development nodemon app"
   },
   "author": "Vineet Ranjan (darkpanda08)",
   "license": "ISC",
@@ -18,8 +17,7 @@
     "ejs": "^3.1.3",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.17.1",
-    "tailwindcss": "^1.4.6"
+    "express-session": "^1.17.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
