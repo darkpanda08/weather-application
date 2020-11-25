@@ -12,6 +12,6 @@
     "env": {
         "API_key":{
             "description": "API Key for your OpenWeatherMap."
-        },
+        }
     }
 }
