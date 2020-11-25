@@ -11,7 +11,8 @@
     "repository": "https://github.com/darkpanda08/weather-application",
     "env": {
         "API_key":{
-            "description": "API Key for your OpenWeatherMap."
+            "description": "API Key for your OpenWeatherMap.",
+            "value": ""
         }
     }
 }
