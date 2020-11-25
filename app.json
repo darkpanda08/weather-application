@@ -8,5 +8,10 @@
         "openweathermap"
     ],
     "website": "https://my-node-weather.herokuapp.com/",
-    "repository": "https://github.com/darkpanda08/weather-application"
+    "repository": "https://github.com/darkpanda08/weather-application",
+    "env": {
+        "API_key":{
+            "description": "API Key for your OpenWeatherMap."
+        },
+    }
 }
